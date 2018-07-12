@@ -1,0 +1,16 @@
+<view class="nav">
+  <view wx:key="{{idx}}" wx:for-index="idx" wx:for="{{navList}}" class="nav-item" data-index="{{idx}}" bindtap='switchNav'>
+    <view data-index="{{idx}}" catchtap='switchNav' class="text {{curIdx == idx ? 'active' : ''}}">{{item}}</view>
+  </view>
+</view>
+<swiper current='{{current}}' bindchange="switchCon" style="height: {{swiperH}}px;" class="content" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item>
+      <share-list class="overhd" list="{{officialList}}"></share-list>
+    </swiper-item>
+    <swiper-item>
+      <share-list class="overhd" list="{{peopleList}}"></share-list>
+    </swiper-item>
+    <swiper-item>
+      <share-list class="overhd" list="{{attentionList}}"></share-list>
+    </swiper-item>
+  </swiper>

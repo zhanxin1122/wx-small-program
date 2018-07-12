@@ -1,0 +1,77 @@
+.head{
+  height: 320rpx;
+  background: #f90500;
+}
+.head .name{
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.head image{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%; 
+}
+.head .op{
+  width: 220rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 20rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50rpx;
+}
+.head .op image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  border-radius:0;
+}
+.head .op .text{
+  font-size: 28rpx;
+  color: #fff;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 20rpx;
+}
+.title .text{
+  font-size: 34rpx;
+  color: #333;
+}
+.title .all-dd{
+  font-size: 28rpx;
+  height: 50rpx;
+}
+.all-dd .all{
+  color: #d13435;
+}
+.all-dd image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+}
+.other-list{
+  margin-left: 20rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.other-list .other-item{
+  height: 100rpx;
+  width: 200rpx;
+}
+.other-list image{
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+}
+.other-list .text{
+  font-size: 34rpx;
+  color: #333;
+}
+.me-list .nav .list-item image{
+  width: 60rpx;
+  height: 60rpx;
+}

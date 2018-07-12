@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "search-main-list": "../../../components/search-main-list/index"
+  }
+}

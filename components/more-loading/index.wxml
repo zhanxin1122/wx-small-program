@@ -1,0 +1,5 @@
+<!--components/more-loading/index.wxml-->
+<view class="more-loading" style="display: {{show ? 'flex' : 'none'}}">
+  <image src="../../images/loading.png"></image>
+  <view class="text">{{text}}</view>
+</view>

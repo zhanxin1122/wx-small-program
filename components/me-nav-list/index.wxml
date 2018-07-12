@@ -1,0 +1,7 @@
+<!--components/me-nav-list/index.wxml-->
+<view class="nav">
+  <navigator wx:for="{{list}}" wx:for-index="idx" wx:key="{{idx}}" class="list-item" url="{{item.url}}">
+    <image src="{{item.img}}"></image>
+    <view class="text">{{item.text}}</view>
+  </navigator>
+</view>

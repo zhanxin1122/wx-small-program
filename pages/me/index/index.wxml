@@ -1,0 +1,25 @@
+<view class="head flex-vertical">
+  <image src="{{headImg}}"></image>
+  <view class="name">{{name}}</view>
+  <!-- <view class="op flex-horizontal">
+    <image src="/images/me/update.png"></image>
+    <view class="text">更新资料</view>
+  </view> -->
+</view>
+<!-- <view class="title">
+  <view class="text">我的订单</view>
+  <view class="all-dd flex-horizontal">
+    <view class="all">全部订单</view>
+    <image src="/images/me/arrow.png"></image>
+  </view>
+</view> -->
+<nav-list list="{{list0}}"></nav-list>
+<view class="line-bg"></view>
+<nav-list class="me-list" list="{{list1}}"></nav-list>
+<view class="line-bg"></view>
+<navigator wx:for="{{list2}}" wx:for-index="idx" wx:key="{{idx}}" class="other-list">
+  <view class="other-item flex-horizontal">
+    <image src="{{item.img}}"></image>
+    <view class="text">{{item.text}}</view>
+  </view>
+</navigator>

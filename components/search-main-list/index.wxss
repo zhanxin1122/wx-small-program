@@ -1,0 +1,47 @@
+/* components/search-main-list/index.wxss */
+.title-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  margin-top: 20rpx; 
+}
+.title-box .title{
+  color: #333;
+  font-size: 30rpx;
+}
+.title-box .more{
+  color: #666;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.title-box .more .icon{
+  width: 15rpx;
+  height: 15rpx;
+  border-right: 4rpx solid #666;
+  border-bottom: 4rpx solid #666;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 12rpx;
+}
+.list .item{
+  display: inline-block;
+  width: 33%;
+}
+.list .item .navigator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.list .item image{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx 0; 
+  border-radius: 50%;
+}
+.list .item .text{
+  color: #999;
+  font-size: 28rpx;
+}

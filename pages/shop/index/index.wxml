@@ -1,0 +1,73 @@
+<view class="{{shopList.length != 0 ? 'page' : ''}}">
+  <view class="title">
+    购物车({{shopList.length}})
+    <view class="manage">编辑</view>
+  </view>
+  <view wx:if="{{shopList.length != 0}}">
+    <view class="list-title">
+      <view class="select {{allSelected ? 'selected' : ''}}" bindtap='switchAll'></view>
+      <image src="../../../images/tm.png"></image>
+      <view class="text">天猫超市</view>
+      <view class="arrow"></view>
+    </view>
+    <view class="list" data-index="{{idx}}" wx:for="{{shopList}}" wx:key="{{idx}}" wx:for-index="idx">
+      <view data-index="{{idx}}" bindtap='selectGoods' class="select-box flex-horizontal">
+        <view data-index="{{idx}}" catchtap='selectGoods' class="select mg0 {{item.selected ? 'selected' : ''}}"></view>
+      </view>
+      <image class="goods-img" src="{{item.img}}"></image>
+      <view class="goods-info">
+        <view class="desc-edit">
+          <view class="desc">{{item.desc}}</view>
+          <!-- <image class="edit" src="../../../images/edit.png"></image> -->
+        </view>
+        <view class="info-num">
+          <view class="info">
+            <view class='price'>￥ {{item.price}}</view>
+            <view class="weight">{{item.weight}}</view>
+          </view>
+          <view class="gg-num-op">
+            <!-- <view class="op">+</view>
+            <view class="detail">{{item.num}}</view> -->
+            <view class="sub" data-index="{{idx}}" bindtap='subNum'>—</view>
+            <input type="number" data-index="{{idx}}" bindinput='inputNum' value="{{item.num}}" readonly></input>
+            <view class="add" data-index="{{idx}}" bindtap='addNum'>+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="coudan">
+      <view class="desc">可享满88元,20kg包邮</view>
+      <view class="navgitar">去凑单
+        <view class="arrow"></view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="gwcnull-box flex-vertical">
+    <image class="gwcnull" src="/images/home/shop_null.jpg"></image>
+    <view class="gwctxt">购物车空空如也~</view>
+  </view>
+  <view class="you-like flex-horizontal">
+    <view class="flex-horizontal">
+      <view class="line"></view>
+      <view class="dot"></view>
+    </view>
+    <image src="/images/cnxh.png"></image>
+    <view>你可能还喜欢</view>
+    <view class="flex-horizontal">
+      <view class="dot dot-l"></view>
+      <view class="line"></view>
+    </view>
+  </view>
+  <goods-list goodsList="{{goodsList}}" showLoading="{{showLoading}}"></goods-list>
+  <view class="js-box" wx:if="{{shopList.length != 0}}">
+    <view class="alls flex-vertical">
+      <view class="foot-select select {{allSelected ? 'selected' : ''}}" bindtap='switchAll'></view>
+      <view class="alltext">全选</view>
+    </view>
+    <view class="jie">去结算</view>
+    <view class="sum-info">
+      <view class="sum-money">总计： <view class="money">￥{{sum}}</view></view>
+      <view class="discount">总额￥{{sum}}，立减￥0.00</view>
+    </view>
+  </view>
+</view>

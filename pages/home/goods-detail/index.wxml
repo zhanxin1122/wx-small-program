@@ -1,0 +1,144 @@
+<!--pages/home/goods-detail/index.wxml-->
+<view class="view-box">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="head-nav">
+    <block wx:key="{{idx}}" wx:for="{{imgUrls}}" wx:for-index="idx" >
+      <swiper-item>
+        <navigator class="swiper-nav"><image src="{{item}}" class="slide-image"/></navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="goods-info">
+    <view class="info">
+      <view class="title">赣州脐橙果园直达精品国字70-85MM香橙送开果器包邮</view>
+      <view>
+        <view class="price">￥59.50</view>
+        <view class="y-price">￥150</view>
+        <view class="shuo">满88免基础运费(10kg内)</view>
+      </view>
+    </view>
+    <view class="op">
+      <image src="/images/home/love.png"></image>
+      <view>收藏</view>
+    </view>
+  </view>
+  <view class="line-bg"></view>
+  <view class="gg-select">
+    已选
+    <view class="gg-info">{{ggArr[ggIdx]}}，{{ggNum}}个</view>
+    <view class="gg-op" bindtap="switchGgShow">
+      <view catchtap="switchGgShow" class="{{!ggFlag ? 'arrow-b' : 'arrow-t'}}"></view>
+    </view>
+  </view>
+  <view wx:if="{{ggFlag}}">
+    <view class="gg-detail">
+      <view class="gg-detail-title">规格</view>
+      <view>
+        <view wx:for="{{ggArr}}" wx:key="{{idx}}" wx:for-index="idx" class="gg-detail-item {{ggIdx == idx ? 'active' : ''}}" data-index="{{idx}}" bindtap='switchGg'>{{item}}</view>
+      </view>
+    </view>
+    <view class="gg-num">
+      数量
+      <view class="gg-num-op">
+        <view class="sub" bindtap='subNum'>—</view>
+        <input type="number" maxlength='9' bindinput='inputNum' value="{{ggNum}}"></input>
+        <view class="add" bindtap='addNum'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class="line-bg"></view>
+  <view class="pos-box flex-between">
+    <view class="pos-title">送至</view>
+    <image src="/images/home/pos.png"></image>
+    <view class="pos-info">广东省深圳市南山区粤海街道 深圳大学桂庙学生宿舍29栋</view>
+    <view class="arrow-r"></view>
+  </view>
+  <view class="shyh pos-box flex-between">
+    <view class="shyh-detail">
+      <view class="jz">
+        不支持7天无理由退货
+      </view>
+      <view class="dui">
+        211限时达
+      </view>
+    </view>
+    <view class="arrow-r"></view>
+  </view>
+  <view class="dp-box">
+    <view class="dp-info flex-between">
+      <view class="dp-detail">
+        <image src="/images/home/logo.png"></image>
+        <view class="dp-name-info">
+          <view class="dp-name">土八鲜旗舰店</view>
+          <view class="dp-info">商品数量:1163 收藏人数:5132</view>
+        </view>
+      </view>
+      <view class="jdkk">
+        进店逛逛
+        <view class="arrow-r"></view>
+      </view>
+    </view>
+    <view class="dp-pj flex-between">
+      <view class="pj-num">评价(123016)</view>
+      <view class="pj-hpd flex-horizontal">
+        好评度
+        <view class="pj-bfb red">98%</view>
+        <view class="arrow-r"></view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="pj-list" wx:for="{{pjList}}" wx:key="{{idx}}" wx:for-index="idx">
+      <view class="user-info">
+        <image src="{{item.head}}"></image>
+        <view class="user-name">{{item.name}}</view>
+        <view class="user-eval">
+          <eval-comp grade="{{item.grade}}"></eval-comp>
+        </view>
+      </view>
+      <view class="user-desc">{{item.desc}}</view>
+      <view class="user-media-box">
+        <view class="user-media" wx:for="{{item.list}}" wx:key="{{midx}}" wx:for-index="midx" wx:for-item="mitem">
+          <video wx:if="{{mitem.type == 'video'}}" class="user-v" src="{{mitem.url}}"></video>
+          <image wx:else class="user-i" src="{{mitem.url}}"></image>
+        </view>
+      </view>
+      <view class="user-gg">{{item.gg}}</view>
+    </view>
+  </view>
+  <view class="ckqbpj">查看全部评价</view>
+  <view class="line-bg"></view>
+  <view class="dptj-box">
+    <view class="dptj-title">店铺推荐</view>
+    <view class="dptj-list">
+      <view class="dptj-list-item" wx:for="{{dptjList}}" wx:for-index="idx" wx:key="{{idx}}">
+        <image src="{{item.img}}"></image>
+        <view class="dptj-list-desc">{{item.desc}}</view>
+        <view class="dptj-list-price">￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="line-bg"></view>
+  <view class="spxq">
+    <view class="spxq-title">商品详情</view>
+    <navigator class="spxq-list" wx:for="{{spxqList}}" wx:for-index="idx" wx:key="{{idx}}" url="{{item.url}}">
+      <image src="{{item.img}}"></image>
+    </navigator>
+  </view>
+</view>
+<view class="foot-list">
+  <view class="foot-gys foot-icon flex-vertical">
+    <image src="/images/home/gys.png"></image>
+    <view>供应商</view>
+  </view>
+  <view class="foot-jd foot-icon flex-vertical">
+    <image src="/images/home/dp.png"></image>
+    <view>进店</view>
+  </view>
+  <view class="foot-gwc foot-icon flex-vertical">
+    <image src="/images/home/gwc.png"></image>
+    <view>购物车</view>
+    <view class="goods-num">{{goodsNum}}</view>
+  </view>
+  <view class="foot-op op-gwc">加入购物车</view>
+  <view class="foot-op op-ljgm">立即购买</view>
+</view>

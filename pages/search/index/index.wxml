@@ -1,0 +1,18 @@
+<view class="search-box flex-horizontal">
+  <view class="box">
+    <image src='../../../images/search/search.png'></image>
+    <input type="text" placeholder-class="placeholder" placeholder='搜索喜欢的产品'/>
+  </view>
+</view>
+<view class="detail">
+  <view class="search-nav">
+    <view class="nav-item flex-horizontal {{curIdx == idx ? 'active' : ''}}" data-index="{{idx}}" bindtap='switchNav' wx:key="{{idx}}" wx:for-index="idx" wx:for="{{navList}}">
+      <view data-index="{{idx}}" class="text" catchtap='switchNav'>{{item.text}}</view>
+      <image data-index="{{idx}}" catchtap='switchNav' src="{{curIdx == idx ? item.selectedImg : item.img}}"></image>
+    </view>
+  </view>
+  <view class="search-list">
+    <search-main-list title="{{curList.title}}" list="{{curList.list}}"></search-main-list>
+    <search-main-list title="{{goodFoods.title}}" list="{{goodFoods.list}}"></search-main-list>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--components/share-list/list.wxml-->
+<view wx:for="{{list}}" wx:for-index="idx" wx:key="{{idx}}" class="list-item">
+  <view class="head">
+    <image src="{{item.head}}"></image>
+    <view class="info">
+      <view class="name">{{item.name}}</view>
+      <view class="time">{{item.time}}</view>
+    </view>
+  </view>
+  <view class="detail">
+    <view class="title ellipsis"  style="display: {{item.title ? 'block' : 'none'}}">{{item.title}}</view>
+    <view class="title0 ellipsis" style="display: {{item.title0 ? 'block' : 'none'}}">{{item.title0}}</view>
+    <view class="desc" style="display: {{item.desc ? 'block' : 'none'}}">{{item.desc}}</view>
+    <image src="{{item.img}}" style="display: {{item.img ? 'block' : 'none'}}"></image>
+    <video class="video" style="display: {{item.video ? 'block' : 'none'}}"></video>
+  </view>
+  <view class="operate">
+    <view class="left"></view>
+    <view class="right"></view>
+  </view>
+</view>

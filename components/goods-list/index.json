@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "more-loading": "../../components/more-loading/index"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/home/goods-detail/index",
+    "pages/search/index/index",
+    "pages/share/index/index",
+    "pages/shop/index/index",
+    "pages/me/index/index",
+    "pages/me/addr-manage/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_red.png"
+      },
+      {
+        "pagePath": "pages/search/index/index",
+        "text": "分类搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_red.png"
+      },
+      {
+        "pagePath": "pages/share/index/index",
+        "text": "吃货圈",
+        "iconPath": "images/share.png",
+        "selectedIconPath": "images/share_red.png"
+      },
+      {
+        "pagePath": "pages/shop/index/index",
+        "text": "购物车",
+        "iconPath": "images/shop.png",
+        "selectedIconPath": "images/shop_red.png"
+      },
+      {
+        "pagePath": "pages/me/index/index",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_red.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "土八鲜美食",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  }
+}

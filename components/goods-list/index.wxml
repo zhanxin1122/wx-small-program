@@ -1,0 +1,10 @@
+<!--components/goods-list/index.wxml-->
+<view class="goods-list">
+  <block wx:key="{{idx}}" wx:for-index="idx" wx:for="{{goodsList}}">
+    <navigator url="/pages/home/goods-detail/index" class="nav">
+      <image src="{{item.img}}"></image>
+      <view class="desc">{{item.desc}}</view>
+    </navigator>
+  </block>
+</view>
+<more-loading text="加载更多..." show="{{showLoading}}"></more-loading>

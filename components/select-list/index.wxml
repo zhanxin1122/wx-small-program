@@ -1,0 +1,11 @@
+<!--components/select-list/index.wxml-->
+<view>
+  <view class="title">
+    <view class="select selected"></view>
+    <slot name="title"></slot>
+  </view>
+  <view class="list" list="{{list}}" data-index="{{idx}}" wx:for="{{list}}" wx:key="{{idx}}" wx:for-index="idx" bindtap='select'>
+    <view class="select selected"></view>
+    <slot name="item{{idx}}"></slot>
+  </view>
+</view>

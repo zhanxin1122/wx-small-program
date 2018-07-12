@@ -1,0 +1,7 @@
+<!--components/eval-comp/index.wxml-->
+<view class="eval-box">
+  <view class="eval-item" wx:for="{{list}}" wx:key="{{idx}}" wx:for-index="idx">
+    <image wx:if="{{idx < grade}}" src="/images/home/wjx_r.png"></image>
+    <image wx:else  src="/images/home/wjx.png"></image>
+  </view>
+</view>

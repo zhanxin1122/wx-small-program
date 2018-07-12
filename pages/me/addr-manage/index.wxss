@@ -1,0 +1,155 @@
+/* pages/me/addr-manage/index.wxss */
+.list-box{
+  padding-bottom: 120rpx;
+}
+.list-item{
+  border-top: 2rpx solid #eee;
+}
+.name-mobile{
+  color: #000;
+  font-size: 30rpx;
+  padding: 20rpx;
+}
+.address{
+  color: #000;
+  font-size: 30rpx;
+  padding: 0 20rpx 20rpx;  
+}
+.info-op{
+  height: 80rpx;
+  border-top: 2rpx solid #eee;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #999;
+}
+.select{
+  width: 35rpx;
+  height: 35rpx;
+}
+.selected{
+  width: 39rpx;
+  height: 39rpx;
+  margin-right: 20rpx;
+}
+.info-op image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.setting{
+  height: 100%;
+  float: left;
+}
+.edit{
+  height: 100%;
+  float: right;
+  margin-right: 20rpx;
+}
+.del{
+  height: 94%;
+  float: right;
+}
+.foot-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120rpx;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+}
+.create-addr{
+  width: 100%;
+  height: 100%;
+  background: #ff272a;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 38rpx;
+}
+.create-addr image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.shade{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.5);
+}
+.addr-box{
+  position: relative;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 50rpx auto 0 5%;
+  background: #fff;
+  padding: 0 20rpx 20rpx;
+  border-radius: 20rpx;
+}
+.title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #eee;
+}
+.cell{
+  position: relative;
+  height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.label{
+  width: 130rpx;
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.cell input{
+  height: 100%;
+}
+.cell image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.select-addr{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+.addr-save{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  background: #ff272a;
+}
+.detail-addr{
+  box-sizing: border-box;
+  padding-right: 70rpx;
+}
+.picker{
+  height:100%;
+  line-height:79rpx;
+}
+.close-shade{
+  position: absolute;
+  right: -13rpx;
+  top: -13rpx;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  background: #ccc;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 37rpx;
+  transform: rotate(45deg);
+}

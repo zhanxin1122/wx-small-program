@@ -1,0 +1,68 @@
+/* components/share-list/list.wxss */
+.list-item{
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.head{
+  height: 90rpx;
+  margin: 0 20rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-bottom: 20rpx;
+}
+.head image{
+  width: 90rpx;
+  height: 90rpx;
+  float:left;
+}
+.head .info{
+  float:left;
+  height: 100%;
+  padding-left: 20rpx;
+}
+.info .name{
+  height: 50%;
+  line-height: 45rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.info .time{
+  height: 50%;
+  line-height: 45rpx;
+  color: #666;
+  font-size: 24rpx; 
+}
+.detail .title{
+  color: #333;
+  font-size: 38rpx;
+  font-weight: bold;
+  padding: 20rpx 20rpx 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.detail .title0{
+  color: #666;
+  font-size: 36rpx;
+  padding: 20rpx 20rpx 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.detail .desc{
+  padding: 20rpx;
+  font-size: 34rpx;
+  color: #333;
+}
+.detail image,
+.detail .video{
+  padding: 10rpx 0;
+  margin: 0 2%;
+  width: 96%;
+  height: 360rpx;
+}
+.operate .left{
+  float: left;
+}
+.operate .right{
+  float: right;
+}

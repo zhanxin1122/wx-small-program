@@ -1,0 +1,45 @@
+<scroll-view scroll-x class="nav-scroll">
+  <view wx:key="{{idx}}" id="{{idx}}" wx:for="{{navData}}" bindtap='switchNav' wx:for-index="idx" class="nav-item {{curIdx == idx ? 'active' : ''}}">{{item.name}}</view>
+</scroll-view>
+<view class="info">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:key="{{idx}}" wx:for="{{imgUrls}}" wx:for-index="idx" >
+      <swiper-item>
+        <navigator class="swiper-nav"><image src="{{item}}" class="slide-image"/></navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="activity">
+    <navigator class="act-item">
+      <view class="icon">
+        <image src="../../../images/home/discount.png"></image>
+      </view>
+      <view class="txt">领优惠券</view>
+    </navigator>
+    <navigator class="act-item">
+      <view class="icon">
+        <image src="../../../images/home/ping.png"></image>
+      </view>
+      <view class="txt">限时秒杀</view>
+    </navigator>
+    <navigator class="act-item">
+      <view class="icon">
+        <image src="../../../images/home/sell.png"></image>
+      </view>
+      <view class="txt">销量排行</view>
+    </navigator>
+    <navigator class="act-item">
+      <view class="icon">
+        <image src="../../../images/home/present.png"></image>
+      </view>
+      <view class="txt">特卖专场</view>
+    </navigator>
+    <navigator class="act-item">
+      <view class="icon">
+        <image src="../../../images/home/sort2.png"></image>
+      </view>
+      <view class="txt">火爆拼团</view>
+    </navigator>
+  </view>
+  <goods-list goodsList="{{goodsList}}" showLoading="{{showLoading}}"></goods-list>
+</view>

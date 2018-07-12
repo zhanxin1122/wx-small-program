@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#f90500",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "nav-list": "../../../components/me-nav-list/index"
+  }
+}

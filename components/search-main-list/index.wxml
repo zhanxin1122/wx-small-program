@@ -1,0 +1,20 @@
+<!--components/search-main-list/index.wxml-->
+<view>
+  <view class="title-box">
+    <view class="title">{{title}}</view>
+    <view class="more-box" style="display: {{list.length > 9 ? 'block' : 'none'}}">
+      <navigator class="more">
+        <view>查看更多</view>
+        <view class="icon"></view>
+      </navigator>
+    </view>
+  </view>
+  <view class="list">
+    <view wx:key="{{idx}}" style="display: {{idx > 8 ? 'none' : 'inline-block'}}" wx:for-index="idx" wx:for="{{list}}" class="item"> 
+      <navigator class="navigator">
+        <image src="{{item.img}}"></image>
+        <view class="text">{{item.text}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>
